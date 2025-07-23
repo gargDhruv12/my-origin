@@ -3,6 +3,7 @@
 import { db } from '@/lib/prisma';
 import { auth } from '@clerk/nextjs/server'
 import React from 'react'
+import { success } from 'zod';
 
 export async function updateUser(data) {
     const { userId } = await auth();
@@ -62,7 +63,7 @@ export async function updateUser(data) {
                 timeout: 10000,
             });
 
-        return result.user;
+        return {success : true, ...result};
     } catch (error) {
         console.error("Error updating user and industry:", error.message);
         throw new Error("Failed to update profile");
@@ -96,7 +97,7 @@ export async function getUserOnboardingStatus() {
             isOnboarded: !!user?.industry,
         };
     } catch (error) {
-        console.error("Error checking onboarding status:", error);
+        console.error("Error checking onboarding status:", error.message);
         throw new Error("Failed to check onboarding status");
     }
 }
