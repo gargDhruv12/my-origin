@@ -1,4 +1,3 @@
-
 const MockInterviewPage = () => {
   return (
     <div>

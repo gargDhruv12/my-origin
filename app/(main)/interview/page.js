@@ -1,11 +1,9 @@
-import React from 'react'
-
-const page = () => {
+const InterviewPage = () => {
   return (
     <div>
-      
+      InterviewPage
     </div>
   )
 }
 
-export default page
+export default InterviewPage;
