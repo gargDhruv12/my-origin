@@ -100,66 +100,50 @@
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+<details>
+<summary><strong>Step 1 — Clone the Repository</strong></summary>
+
 ```bash
 git clone https://github.com/gargDhruv12/my-origin.git
 cd my-origin
-2️⃣ Install Dependencies
-Make sure Node.js v18 or above is installed.
-
+</details> <details> <summary><strong>Step 2 — Install Dependencies</strong></summary>
 bash
 Copy code
 npm install
-3️⃣ Setup Environment Variables
-Create a .env.local file in the root directory.
+</details> <details> <summary><strong>Step 3 — Setup Environment Variables</strong></summary>
+Create a .env.local file:
 
 bash
 Copy code
 touch .env.local
-Add the following variables to .env.local:
+Add the following:
 
 env
 Copy code
-# Neon PostgreSQL Database
 DATABASE_URL="postgresql://<username>:<password>@<neon-host>/<database>?sslmode=require"
 
-# Clerk Authentication
 CLERK_SECRET_KEY=your_clerk_secret_key
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 
-# Gemini AI
 GEMINI_API_KEY=your_gemini_api_key
 
-# Inngest
 INNGEST_EVENT_KEY=your_inngest_event_key
 INNGEST_SIGNING_KEY=your_inngest_signing_key
-4️⃣ Setup Prisma (Neon DB)
-Generate Prisma client:
-
+</details> <details> <summary><strong>Step 4 — Setup Prisma (Neon DB)</strong></summary>
 bash
 Copy code
 npx prisma generate
-Push schema to Neon:
-
-bash
-Copy code
 npx prisma db push
-(Optional – open Prisma Studio)
-
-bash
-Copy code
-npx prisma studio
-5️⃣ Start Inngest (Background Jobs)
+</details> <details> <summary><strong>Step 5 — Start Inngest</strong></summary>
 bash
 Copy code
 npx inngest dev
-Keep this running in a separate terminal.
-
-6️⃣ Start Development Server
+</details> <details> <summary><strong>Step 6 — Start Development Server</strong></summary>
 bash
 Copy code
 npm run dev
-7️⃣ Open in Browser
+</details> <details> <summary><strong>Step 7 — Open in Browser</strong></summary>
 Visit 👉 http://localhost:3000
-
 🎉 MyOrigin is now running locally.
+
+</details> ```
