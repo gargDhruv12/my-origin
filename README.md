@@ -1,36 +1,197 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 MyOrigin  
+## AI-Powered Personalized Career Intelligence Platform
 
-## Getting Started
+<p align="center">
+  <img src="public/images/banner.png" width="900" />
+</p>
 
-First, run the development server:
+<p align="center">
+  <b>Build smarter careers with AI-driven resumes, assessments, insights, and performance tracking.</b>
+</p>
 
+---
+
+## 🌟 About MyOrigin
+
+**MyOrigin** is an AI-powered **Personalized Career Intelligence Platform** that helps students and professionals **build ATS-friendly resumes**, **practice AI-generated quizzes**, **track performance**, and **stay updated with industry trends** — all from a single personalized dashboard.
+
+---
+
+## 🖼️ Platform Preview
+
+### 🏠 Home & Onboarding
+<p align="center">
+  <img src="public/images/home.png" width="800" />
+</p>
+
+### 📈 Industry Insights
+<p align="center">
+  <img src="public/images/insights1.png" width="800" />
+  <br/>
+  <img src="public/images/insights2.png" width="800" />
+</p>
+
+### 📝 ATS Resume Builder
+<p align="center">
+  <img src="public/images/resume1.png" width="800" />
+  <br/>
+  <img src="public/images/resume2.png" width="800" />
+</p>
+
+### 📝 Cover letters
+<p align="center">
+  <img src="public/images/cover.png" width="800" />
+</p>
+
+### 🧠 AI-Generated Quizzes
+<p align="center">
+  <img src="public/images/quiz1.png" width="800" />
+  <br/>
+  <img src="public/images/quiz1.png" width="800" />
+</p>
+
+
+
+---
+
+## 🎯 Key Features
+
+### 📝 ATS-Optimized Career Documents
+- AI-generated **ATS-friendly resumes**
+- Smart **cover letter generation**
+- Markdown-based rendering using **React Markdown**
+
+### 🧠 AI-Powered Skill Assessment
+- Personalized quizzes using **Gemini API**
+- Adaptive difficulty
+- Instant feedback & improvement tips
+
+### 📊 Performance Dashboard
+- Skill-wise progress tracking
+- Weekly growth analytics
+- Career readiness indicators
+
+### 📈 Industry Intelligence
+- **Weekly updated industry insights**
+- Role-based recommendations
+- Market trend analysis
+
+### 📄 Export & Sharing
+- Resume and reports exportable as **PDF**
+- Clean formatting using **HTML → PDF**
+
+---
+
+## 🛠️ Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nextjs,react,postgres,js,html,css" />
+</p>
+
+- **Next.js**
+- **React.js**
+- **PostgreSQL**
+- **Clerk (Authentication)**
+- **Google Gemini API**
+- **React Markdown**
+- **HTML2PDF**
+
+
+
+### 1️⃣ Clone Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/myorigin.git
+cd myorigin
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2️⃣ Install Dependencies
+```bash
+Copy code
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3️⃣ Setup Environment Variables
+```bash
+Create a .env file in the root directory.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+touch .env
+```
 
-## Learn More
+Add the following variables:
+```bash
+# Neon PostgreSQL Database
+DATABASE_URL="postgresql://<username>:<password>@<neon-host>/<database>?sslmode=require"
 
-To learn more about Next.js, take a look at the following resources:
+# Clerk Authentication
+CLERK_SECRET_KEY=your_clerk_secret_key
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Gemini AI
+GEMINI_API_KEY=your_gemini_api_key
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Inngest
+INNGEST_EVENT_KEY=your_inngest_event_key
+INNGEST_SIGNING_KEY=your_inngest_signing_key
+```
 
-## Deploy on Vercel
+4️⃣ Setup Prisma (Database)
+```bash
+Generate Prisma Client:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npx prisma generate
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push schema to Neon DB:
+```bash
+npx prisma db push
+```
+
+(Optional – view database)
+```bash
+npx prisma studio
+```
+
+5️⃣ Setup Inngest (Background Jobs)
+
+Start Inngest Dev Server:
+```bash
+npx inngest dev
+```
+
+This enables:
+
+Background jobs
+
+Event-driven workflows
+
+Async AI tasks (quizzes, insights, reports)
+
+📌 Keep this running in a separate terminal during development.
+
+6️⃣ Start the Application
+```bash
+npm run dev
+```
+
+7️⃣ Open in Browser
+
+Visit 👉 http://localhost:3000
+
+🎉 MyOrigin is now running locally
+
+### 🔐 Security & Privacy
+
+-Secure authentication using Clerk
+
+-Encrypted user data in PostgreSQL
+
+-Privacy-first AI interactions
+
+
+### 👨‍💻 Author
+
+Dhruv Garg
+B.Tech @ NIT Kurukshetra
+AI | Full-Stack | Open-source
+
+MyOrigin helps users not just prepare for jobs — but understand their career origin.
