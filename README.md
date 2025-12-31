@@ -103,7 +103,7 @@
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/your-username/myorigin.git
+git clone https://github.com/gargDhruv12/my-origin.git
 cd myorigin
 ```
 
