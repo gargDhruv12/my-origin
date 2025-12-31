@@ -102,10 +102,10 @@
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/your-username/myorigin.git
+git clone https://github.com/gargDhruv12/my-origin.git
 cd myorigin
 
-
+```bash
 2️⃣ Install Dependencies
 
 Make sure Node.js (v18 or above) is installed.
@@ -113,7 +113,7 @@ Make sure Node.js (v18 or above) is installed.
 npm install
 
 
-
+```bash
 3️⃣ Setup Environment Variables
 
 Create a file named .env.local in the root directory.
