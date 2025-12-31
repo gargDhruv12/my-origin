@@ -98,52 +98,100 @@
 
 ---
 
-## ⚙️ Installation & Setup
-
-<details>
-<summary><strong>Step 1 — Clone the Repository</strong></summary>
-
+### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/gargDhruv12/my-origin.git
-cd my-origin
-</details> <details> <summary><strong>Step 2 — Install Dependencies</strong></summary>
-bash
+git clone https://github.com/your-username/myorigin.git
+cd myorigin
+```
+
+2️⃣ Install Dependencies
+```bash
 Copy code
 npm install
-</details> <details> <summary><strong>Step 3 — Setup Environment Variables</strong></summary>
-Create a .env.local file:
+```
 
-bash
-Copy code
-touch .env.local
-Add the following:
+3️⃣ Setup Environment Variables
+```bash
+Create a .env file in the root directory.
 
-env
-Copy code
+touch .env
+```
+
+Add the following variables:
+```bash
+# Neon PostgreSQL Database
 DATABASE_URL="postgresql://<username>:<password>@<neon-host>/<database>?sslmode=require"
 
+# Clerk Authentication
 CLERK_SECRET_KEY=your_clerk_secret_key
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 
+# Gemini AI
 GEMINI_API_KEY=your_gemini_api_key
 
+# Inngest
 INNGEST_EVENT_KEY=your_inngest_event_key
 INNGEST_SIGNING_KEY=your_inngest_signing_key
-</details> <details> <summary><strong>Step 4 — Setup Prisma (Neon DB)</strong></summary>
-bash
-Copy code
-npx prisma generate
-npx prisma db push
-</details> <details> <summary><strong>Step 5 — Start Inngest</strong></summary>
-bash
-Copy code
-npx inngest dev
-</details> <details> <summary><strong>Step 6 — Start Development Server</strong></summary>
-bash
-Copy code
-npm run dev
-</details> <details> <summary><strong>Step 7 — Open in Browser</strong></summary>
-Visit 👉 http://localhost:3000
-🎉 MyOrigin is now running locally.
+```
 
-</details> ```
+4️⃣ Setup Prisma (Database)
+```bash
+Generate Prisma Client:
+
+npx prisma generate
+```
+
+Push schema to Neon DB:
+```bash
+npx prisma db push
+```
+
+(Optional – view database)
+```bash
+npx prisma studio
+```
+
+5️⃣ Setup Inngest (Background Jobs)
+
+Start Inngest Dev Server:
+```bash
+npx inngest dev
+```
+
+This enables:
+
+Background jobs
+
+Event-driven workflows
+
+Async AI tasks (quizzes, insights, reports)
+
+📌 Keep this running in a separate terminal during development.
+
+6️⃣ Start the Application
+```bash
+npm run dev
+```
+
+7️⃣ Open in Browser
+
+Visit 👉 http://localhost:3000
+
+🎉 MyOrigin is now running locally
+
+### 🔐 Security & Privacy
+
+-Secure authentication using Clerk
+
+-Encrypted user data in PostgreSQL
+
+-Privacy-first AI interactions
+
+
+### 👨‍💻 Author
+
+Dhruv Garg
+B.Tech @ NIT Kurukshetra
+AI | Full-Stack | Open-source
+
+MyOrigin helps users not just prepare for jobs — but understand their career origin.
