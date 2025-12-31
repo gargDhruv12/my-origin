@@ -28,12 +28,14 @@
 <p align="center">
   <img src="public/images/insights1.png" width="800" />
   <br/>
+  <br/>
   <img src="public/images/insights2.png" width="800" />
 </p>
 
 ### 📝 ATS Resume Builder
 <p align="center">
   <img src="public/images/resume1.png" width="800" />
+  <br/>
   <br/>
   <img src="public/images/resume2.png" width="800" />
 </p>
@@ -46,6 +48,7 @@
 ### 🧠 AI-Generated Quizzes
 <p align="center">
   <img src="public/images/quiz1.png" width="800" />
+  <br/>
   <br/>
   <img src="public/images/quiz1.png" width="800" />
 </p>
