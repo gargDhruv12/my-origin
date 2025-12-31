@@ -100,31 +100,26 @@
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone Repository
+### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/gargDhruv12/my-origin.git
-cd myorigin
-
-```bash
+cd my-origin
 2️⃣ Install Dependencies
+Make sure Node.js v18 or above is installed.
 
-Make sure Node.js (v18 or above) is installed.
-
+bash
+Copy code
 npm install
-
-
-```bash
 3️⃣ Setup Environment Variables
+Create a .env.local file in the root directory.
 
-Create a file named .env.local in the root directory.
-
+bash
+Copy code
 touch .env.local
+Add the following variables to .env.local:
 
-
-
-
-Add the following variables:
-
+env
+Copy code
 # Neon PostgreSQL Database
 DATABASE_URL="postgresql://<username>:<password>@<neon-host>/<database>?sslmode=require"
 
@@ -138,52 +133,33 @@ GEMINI_API_KEY=your_gemini_api_key
 # Inngest
 INNGEST_EVENT_KEY=your_inngest_event_key
 INNGEST_SIGNING_KEY=your_inngest_signing_key
-
-
-INNGEST_SIGNING_KEY=your_inngest_signing_key
-4️⃣ Setup Prisma (Database)
-Generate Prisma Client:
+4️⃣ Setup Prisma (Neon DB)
+Generate Prisma client:
 
 bash
 Copy code
 npx prisma generate
-Push schema to Neon DB:
+Push schema to Neon:
 
 bash
 Copy code
 npx prisma db push
-(Optional – view database)
+(Optional – open Prisma Studio)
 
 bash
 Copy code
 npx prisma studio
-
-
-5️⃣ Setup Inngest (Background Jobs)
-
-Start Inngest Dev Server:
-
+5️⃣ Start Inngest (Background Jobs)
+bash
+Copy code
 npx inngest dev
+Keep this running in a separate terminal.
 
-
-This enables:
-
-Background jobs
-
-Event-driven workflows
-
-Async AI tasks (quizzes, insights, reports)
-
-📌 Keep this running in a separate terminal during development.
-
-
-
-
-6️⃣ Start the Application
+6️⃣ Start Development Server
+bash
+Copy code
 npm run dev
-
 7️⃣ Open in Browser
-
 Visit 👉 http://localhost:3000
 
-🎉 MyOrigin is now running locally
+🎉 MyOrigin is now running locally.
