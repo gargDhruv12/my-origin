@@ -24,25 +24,33 @@
   <img src="public/images/home.png" width="800" />
 </p>
 
-### 📊 Personalized Dashboard
+### 📈 Industry Insights
 <p align="center">
-  <img src="public/images/dashboard.png" width="800" />
+  <img src="public/images/insights1.png" width="800" />
+  <br/>
+  <img src="public/images/insights2.png" width="800" />
 </p>
 
 ### 📝 ATS Resume Builder
 <p align="center">
-  <img src="public/images/resume-builder.png" width="800" />
+  <img src="public/images/resume1.png" width="800" />
+  <br/>
+  <img src="public/images/resume2.png" width="800" />
+</p>
+
+### 📝 Cover letters
+<p align="center">
+  <img src="public/images/cover.png" width="800" />
 </p>
 
 ### 🧠 AI-Generated Quizzes
 <p align="center">
-  <img src="public/images/quiz.png" width="800" />
+  <img src="public/images/quiz1.png" width="800" />
+  <br/>
+  <img src="public/images/quiz1.png" width="800" />
 </p>
 
-### 📈 Industry Insights
-<p align="center">
-  <img src="public/images/insights.png" width="800" />
-</p>
+
 
 ---
 
@@ -88,15 +96,7 @@
 - **React Markdown**
 - **HTML2PDF**
 
----
 
-## 🧩 Architecture Overview
-
-<p align="center">
-  <img src="public/images/architecture.png" width="850" />
-</p>
-
----
 
 ### 1️⃣ Clone Repository
 ```bash
